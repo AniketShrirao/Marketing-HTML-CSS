@@ -226,7 +226,7 @@
                 <span class="helperMessage">Error</span>
               </div>
               <div class="form-group">
-                <input type="email" id="email" placeholder="Enter Your Email Id">
+                <input type="text" id="email" placeholder="Enter Your Email Id">
                 <span class="helperMessage">Error</span>
               </div>
               <div class="form-group">
@@ -294,8 +294,32 @@
       <!--Contact section start-->
       <section class="contact">
         <div class="wrapper">
-          <h2 class="border">Contact Us</h2>
-
+          <h2 class="border-It">contact us</h2>
+          <form action="#FIXME" class="Contact-form" method="post">
+            <div class="form-group">
+              <label for="Contact-form-name">name</label>
+              <input type="text" id="Contact-form-name">
+            </div>
+            <div class="form-group">
+              <label for="Contact-form-email">email</label>
+              <input type="text" id="Contact-form-email">
+            </div>
+            <div class="form-group">
+              <label for="Contact-form-subject">subject</label>
+              <input type="text" id="Contact-form-subject">
+            </div>
+            <div class="form-group">
+              <label for="Contact-form-message">message</label>
+              <input type="text" id="Contact-form-message">
+            </div>
+            <div class="form-control">
+              <input class="send" type="submit" value="Send">
+            </div>
+          </form>
+          <div class='customAlert'>
+            <p class='message'></p>
+            <input type='button' class='confirmButton' value='Ok'>
+          </div>
         </div>
       </section>
       <!--Contact section end-->            
