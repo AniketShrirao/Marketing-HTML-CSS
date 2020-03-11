@@ -100,7 +100,7 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 97%; 
   margin: 0 auto;
 }
 /*=================================
@@ -144,6 +144,33 @@ nav li a:hover { color: blueviolet; }
   main styling starts here
 =================================*/
 
+/*=================================
+  Banner styling starts here
+=================================*/ 
+.banner {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.banner h2 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.banner span{
+  display: inline-block;
+  padding: 21px 0px 32px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+
+ /*=================================
+  Banner styling ends here
+=================================*/
 
 
 
