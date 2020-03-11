@@ -176,9 +176,19 @@ nav li a:hover { color: blueviolet; }
   align-items: center;
   justify-content: center;
   letter-spacing: 1px;
-  left: 189.7%;
   position: absolute;
   top: 4.3%;
+}
+
+.slide:nth-of-type(1) .slide-head { left: 86.5%; }
+.slide:nth-of-type(2) .slide-head { left: 189.7%; } 
+.slide:nth-of-type(3) .slide-head { left: 293.5%; }
+.slide:nth-of-type(4) .slide-head { left: 395.7%; }
+.slide:nth-of-type(5) .slide-head { left: 498.5%; }
+
+.slide-head:hover {
+  background: #000;
+  color: #fff;
 }
 
 .Marketing-sldier { 
@@ -265,7 +275,22 @@ nav li a:hover { color: blueviolet; }
   Banner styling ends here
 =================================*/
 
+/*=================================
+  Offer styling starts here
+=================================*/ 
 
+.Offer {
+  padding-bottom: 84px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+ /*=================================
+  Offer styling ends here
+=================================*/ 
 
 
 
