@@ -280,7 +280,7 @@ nav li a:hover { color: blueviolet; }
 =================================*/ 
 
 .Offer {
-  padding-bottom: 84px;
+  padding-bottom: 79px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -347,14 +347,229 @@ nav li a:hover { color: blueviolet; }
 
 .pricing h2 {
   padding-bottom: 24px;
-  font-size: 24px;
+  font-size: 29px;
+  line-height: 1.5;
+  text-transform: capitalize;
 }
+
 .pricing p {
   padding-bottom: 80px;
+  letter-spacing: 1px;
   font-size: 16px;
 }
 
+.plans {
+  display: flex;
+  justify-content: space-between;
+}
 
+.plans article { width: 32.2%; }
+
+.plans h3 {
+  padding: 38px 0;
+  background: #000;  
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.plans .Pro { background: #616161; }
+
+.plans ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.plans li {
+  padding: 18px 0px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.plans span { letter-spacing: 1px; }
+
+.plans li span > span {
+  padding: 0px 6px;
+  margin-bottom: 11px;
+  font-weight: 600;  
+}
+
+ul .price span {
+  padding-bottom: 15px;
+  font-size: 34px;
+  font-weight: 200;
+  color: #000;
+  letter-spacing: 5px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  color: #888383;
+}
+
+.price {  color: #888383; }
+
+.plans li.signup {
+  padding: 24px 0;
+  background:#f1f1f1;
+}
+
+.signup-Btn,
+.signup-modal #submit {
+  padding: 13px 8%;
+  box-sizing: border-box;
+  background: #4caf50;
+  border: 1px solid #4caf50;
+  color: #fff;
+  cursor: pointer;
+  text-transform: capitalize;
+ }
+
+ .signup-Btn:hover ,.signup-modal #submit:hover {
+  color: #4caf50;
+  background: #fff;
+}
+
+.signup-modal {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  left: 0;
+  text-align: center;
+  top: 0;
+  transition: all 0.3s ease;
+}
+
+.signup-modal form{
+  position: relative;
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  opacity: 1;
+  animation-name: slide;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.signup-modal .form-group {
+  width: 100%;
+  padding: 10px;
+}
+
+.signup-modal .form-group span {
+  width: 24%;
+  padding: 13px 15%;
+  margin: 30px;
+}
+
+.signup-modal .form-control { padding: 20px; }
+
+.signup-modal .form-group input{
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  width: 40%;
+}
+
+@keyframes slide {
+  0% {
+    top: -50%;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.visible { 
+  display: flex;
+  transition: all 0.3s ease;
+}
+.hidden { 
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.posts li:hover { box-shadow: 0 20px 20px 0 rgba(0,0,0,0.2), 0 10px 30px 0 rgba(0,0,0,0.19); }
+.noscroll { overflow: hidden; }
+.close:hover { opacity: 1;}
+.close:before { transform: rotate(45deg); }
+.close:after { transform: rotate(-45deg); }
+
+
+.helperMessage,
+.error,
+.success,
+.empty {
+  display: none;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.error,
+.empty {
+  box-shadow: 2px 3px 10px 1px rgba(255, 0, 0, 0.3);
+  color: indianred;
+  display: inline-block;
+}
+
+.success {
+  box-shadow: 2px 3px 10px 1px rgba(0, 255, 0, 0.5);
+  display: inline-block;
+  color: #28b528;
+}
+
+.error::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #ededed;
+  position: relative;
+  top: -4px;
+  left: -49%;
+  font-size: 0;
+
+}
 
  /*=================================
   Pricing styling ends here
