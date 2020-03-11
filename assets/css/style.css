@@ -107,10 +107,8 @@ li {
   Header styling starts here
 =================================*/
 
-
-
-
-
+header { background: #f1f1f1; }
+header .wrapper { width: 80.5%; }
 
 /*=================================
   Header styling ends here
