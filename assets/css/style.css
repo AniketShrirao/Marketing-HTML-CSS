@@ -512,7 +512,7 @@ ul .price span {
   content: ' ';
   height: 33px;
   width: 2px;
-  background-color: #fff;
+  background-color: indianred;
   transition: all 0.3s ease;
 }
 
@@ -524,9 +524,9 @@ ul .price span {
   display: none;
   transition: all 0.3s ease;
 }
+.noscroll { overflow: hidden; }
 
 .posts li:hover { box-shadow: 0 20px 20px 0 rgba(0,0,0,0.2), 0 10px 30px 0 rgba(0,0,0,0.19); }
-.noscroll { overflow: hidden; }
 .close:hover { opacity: 1;}
 .close:before { transform: rotate(45deg); }
 .close:after { transform: rotate(-45deg); }
@@ -568,13 +568,31 @@ ul .price span {
   top: -4px;
   left: -49%;
   font-size: 0;
-
 }
 
  /*=================================
   Pricing styling ends here
 =================================*/ 
 
+/*=================================
+  About styling starts here
+=================================*/ 
+
+.about {
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+.owners {
+display:flex;
+align-content: center;
+}
+
+
+
+/*=================================
+About styling ends here
+=================================*/ 
 
 
 /*=================================
