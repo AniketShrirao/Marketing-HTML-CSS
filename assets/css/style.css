@@ -134,8 +134,6 @@ nav li a {
 
 .hamburger { display: none; }
 
-nav li a:hover { color: blueviolet; }
-
 /*=================================
   Header styling ends here
 =================================*/  
@@ -180,16 +178,12 @@ nav li a:hover { color: blueviolet; }
   top: 4.3%;
 }
 
-.slide:nth-of-type(1) .slide-head { left: 86.5%; }
-.slide:nth-of-type(2) .slide-head { left: 189.7%; } 
-.slide:nth-of-type(3) .slide-head { left: 293.5%; }
-.slide:nth-of-type(4) .slide-head { left: 395.7%; }
-.slide:nth-of-type(5) .slide-head { left: 498.5%; }
+.slide:nth-of-type(1) .slide-head { left: 83.7%; }
+.slide:nth-of-type(2) .slide-head { left: 183.7%; } 
+.slide:nth-of-type(3) .slide-head { left: 285.5%; }
+.slide:nth-of-type(4) .slide-head { left: 390.7%; }
+.slide:nth-of-type(5) .slide-head { left: 493.5%; }
 
-.slide-head:hover {
-  background: #000;
-  color: #fff;
-}
 
 .Marketing-sldier { 
   position: relative;
@@ -199,12 +193,12 @@ nav li a:hover { color: blueviolet; }
 .slider {
   display: flex;
   transition: all 0.4s ease;
-  transform: translateX(-106%);
+  transform: translateX(-100%);
 }
 
 .slide {
   width: 100%;
-  min-width: 1351px;
+  min-width: 100%;
 }
 
 .slide-controls {
@@ -241,8 +235,6 @@ nav li a:hover { color: blueviolet; }
 
 #prev { left: 1.5%; }
 #next { right: 1.5%; }
-.btn:hover { background-color: rgba(0,0,0,0.5); }
-
 .slide-dots {
   padding: 10px 0;
   width: 86%;
@@ -269,7 +261,6 @@ nav li a:hover { color: blueviolet; }
 .transition-active { transition: transform 0.4s ease-in-out; }
 .transition-inactive { transition: all 0s; }
 .dot-active { background: #fff; }
-.dot:hover { background-color: rgba(0,0,0,0.3); }
 
  /*=================================
   Banner styling ends here
@@ -353,7 +344,7 @@ nav li a:hover { color: blueviolet; }
 }
 
 .pricing p {
-  padding-bottom: 80px;
+  padding-bottom: 78px;
   letter-spacing: 1px;
   font-size: 16px;
 }
@@ -416,7 +407,7 @@ ul .price span {
 
 .plans li.signup {
   padding: 24px 0;
-  background:#f1f1f1;
+  background:#f1f1f1; 
 }
 
 .signup-Btn,
@@ -430,10 +421,6 @@ ul .price span {
   text-transform: capitalize;
  }
 
- .signup-Btn:hover ,.signup-modal #submit:hover {
-  color: #4caf50;
-  background: #fff;
-}
 
 .signup-modal {
   position: fixed;
@@ -527,8 +514,6 @@ ul .price span {
 }
 .noscroll { overflow: hidden; }
 
-.posts li:hover { box-shadow: 0 20px 20px 0 rgba(0,0,0,0.2), 0 10px 30px 0 rgba(0,0,0,0.19); }
-.close:hover { opacity: 1;}
 .close:before { transform: rotate(45deg); }
 .close:after { transform: rotate(-45deg); }
 
@@ -603,9 +588,7 @@ cursor: pointer;
 display: flex;
 flex-direction: column;
 justify-content: center;
-box-shadow: black;
 align-items: center;
-text-shadow: violet;
 text-align: left;
 }
 
@@ -648,10 +631,6 @@ text-align: left;
   text-transform: capitalize;
 }
 
-.owners a:hover {
-color: #f1f1f1;
-background: #000; 
-}
 
 .owners-lightBox {
   position: fixed;
@@ -725,11 +704,6 @@ About styling ends here
   padding: 5px;
 }
 
-.send:hover {
-  color: #000;
-  background: #fff;
-  border-color: #000;
-}
 
 .customAlert {
   display: none;
@@ -747,9 +721,8 @@ About styling ends here
   margin-top: -5.2%;
   border: 1px solid #fff;
   background: #FFEFBA;
-  background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
   background: linear-gradient(to right, #FFFFFF, #FFEFBA);
-  background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+  background: linear-gradient(to right, #ec2F4B, #009FFF);
   animation-name: fadeIn;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
@@ -776,15 +749,8 @@ input[type='button'] {
   color: #fff;
   font-size: 18px;
   font-weight: 800;
-  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432);
   background: #2b2e37;
-}
-
-input[type='button']:hover {
-  transition: 0.3s;
-  cursor: pointer;
-  background: white;
-  color: #2b2e37;
 }
 
 .input[type="button"]::before {
@@ -881,13 +847,6 @@ footer p {
   font-weight: 600;
 }
 
-.to-top:hover {
- color:#000;
- background: #fff;
-}
-
-.to-top:hover::before { color: #000; }
-
 .to-top:before {
   content: '\f062';
   padding-right: 13%;
@@ -934,16 +893,166 @@ footer p a {
   text-decoration: underline;
 }
 
-footer p a:hover, .social-icons a:hover { color: blueviolet; }
-
  /*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
+/*media query for 1024px starts here*/
+@media only screen and (min-width: 1024px) {
+
+  nav li a:hover { color: blueviolet; }
+  .btn:hover { background-color: rgba(0,0,0,0.5); }
+  .dot:hover { background-color: rgba(0,0,0,0.3); }
+
+  .signup-Btn:hover ,.signup-modal #submit:hover {
+    color: #4caf50;
+    background: #fff;
+  }
+
+  .slide-head:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  .owners a:hover {
+    color: #f1f1f1;
+    background: #000; 
+    }
+  
+    .send:hover {
+      color: #000;
+      background: #fff;
+      border-color: #000;
+    }
+  
+    input[type='button']:hover {
+      transition: 0.3s;
+      cursor: pointer;
+      background: white;
+      color: #2b2e37;
+    }
+    
+    .to-top:hover {
+     color:#000;
+     background: #fff;
+    }
+
+  .close:hover { opacity: 1;}  
+  .to-top:hover::before { color: #000; }
+  footer p a:hover, .social-icons a:hover { color: blueviolet; }
+}  
+
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
-
-
-
+  .Offer .border-It { width: 22%; }
+  .services { flex-wrap: wrap; }
+  .services li { padding: 26px 2% 30px 1.5%; }
+  .about .border-It { width: 18%; }
+  .contact .border-It { width: 16%; }
 }  
+
+/*media query for 767px starts here*/
+@media only screen and (max-width: 767px) {
+  .slide-head {width: 16.7%; }
+  .slide:nth-of-type(1) .slide-head { left:79.7%; }
+  .slide:nth-of-type(2) .slide-head { left:179.7%; }
+  .slide:nth-of-type(3) .slide-head { left:284.5%; }
+  .slide:nth-of-type(4) .slide-head { left:385.7%; }
+  .slide:nth-of-type(5) .slide-head { left:489.5%; }
+  .Offer .border-It { width: 28%; }
+  .services { flex-wrap: wrap; }
+  .about .border-It { width: 24%; }
+  .contact .border-It { width: 21%; }
+  .plans article { width: 49%; }
+  .plans article:first-of-type { margin-right:13px; }
+  .plans article:last-of-type { margin-top: 15px; }
+  .owners article { width: 47%; }
+  .owners article:last-of-type { margin-top: 25px; }
+  .to-top { width: 16.6%; }
+
+  .plans,
+  .owners { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .services li { 
+    width: 46%;
+    padding: 26px 2% 30px 1.5%;
+  }
+}
+
+/*media query for 676px starts here*/
+@media only screen and (max-width: 676px) {
+  .slide-head {width: 23%; }
+  .slide:nth-of-type(1) .slide-head { left:72.7%; }
+  .slide:nth-of-type(2) .slide-head { left:172.7%; }
+  .slide:nth-of-type(3) .slide-head { left:277.5%; }
+  .slide:nth-of-type(4) .slide-head { left:378.7%; }
+  .slide:nth-of-type(5) .slide-head { left:481.5%; }
+  .border-It { font-size: 24px; }
+  .services { flex-wrap: wrap; }
+  .services li { width: 100%; }
+  .Offer .border-It { width: 34%; }
+  .about .border-It { width: 30%; }
+  .contact .border-It { width: 26%; }
+  .pricing h2 { font-size: 27px; }
+  .pricing p { font-size: 15px; }
+  .plans article h3 { font-size: 23px; }
+  ul .price span { font-size: 30px; }
+  .plans article { width: 70%; }
+  .plans article:first-of-type { margin:0; }
+  .plans article:nth-of-type(2) { margin-top: 15px; }
+  .owners article { width: 70%; }
+  .owners h3 { font-size: 24px; }
+  .owners p { font-size: 15px; }
+  .owners article:nth-of-type(2) { margin-top: 25px; }
+  .to-top { width: 25%; }
+
+  .plans,
+  .owners { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  } 
+}
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .slide-head {width: 23%; }
+  .slide:nth-of-type(1) .slide-head { left:72.7%; }
+  .slide:nth-of-type(2) .slide-head { left:172.7%; }
+  .slide:nth-of-type(3) .slide-head { left:277.5%; }
+  .slide:nth-of-type(4) .slide-head { left:378.7%; }
+  .slide:nth-of-type(5) .slide-head { left:481.5%; }
+  .border-It { font-size: 24px; }
+  .services { flex-wrap: wrap; }
+  .services li { width: 100%; }
+  .Offer .border-It { width: 34%; }
+  .about .border-It { width: 30%; }
+  .contact .border-It { width: 26%; }
+  .pricing h2 { font-size: 27px; }
+  .pricing p { font-size: 15px; }
+  .plans article h3 { font-size: 23px; }
+  ul .price span { font-size: 30px; }
+  .plans article { width: 70%; }
+  .plans article:first-of-type { margin:0; }
+  .plans article:nth-of-type(2) { margin-top: 15px; }
+  .owners article { width: 70%; }
+  .owners h3 { font-size: 24px; }
+  .owners p { font-size: 15px; }
+  .owners article:nth-of-type(2) { margin-top: 25px; }
+  .to-top { width: 25%; }
+
+  .plans,
+  .owners { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  } 
+}
