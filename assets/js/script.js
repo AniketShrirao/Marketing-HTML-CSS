@@ -161,3 +161,17 @@ SignUpFormModal(html,signupBtn,FormModal,signupModalForm,close);
  /*=================================
   Form Modal function ends here
 =================================*/
+
+ /*=================================
+  owners-lightBox function starts here
+=================================*/
+
+// Get Elements Required for LightBox
+var html = document.querySelector('html');
+var ownersLightBox = document.querySelectorAll('.owners article');
+var Lightbox = document.querySelector('.owners-lightBox');
+var contentInsideLightbox = document.querySelector('.lightBox-Article');
+
+ /*=================================
+  owners-lightBox function ends here
+=================================*/
