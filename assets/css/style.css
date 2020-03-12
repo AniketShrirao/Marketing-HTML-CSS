@@ -280,7 +280,7 @@ nav li a:hover { color: blueviolet; }
 =================================*/ 
 
 .Offer {
-  padding-bottom: 79px;
+  padding-bottom: 75px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -302,7 +302,7 @@ nav li a:hover { color: blueviolet; }
   text-align: left;
 }
 
-.services li { padding: 34px 3% 34px 1.5%; }
+.services li { padding: 26px 3% 30px 1.5%; }
 
 .services h3 {
   padding-bottom: 13px;
@@ -315,7 +315,7 @@ nav li a:hover { color: blueviolet; }
 .services p {
   font-weight: 500;
   font-size: 17px;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 .Design { background: #f1f1f1; }
@@ -346,7 +346,7 @@ nav li a:hover { color: blueviolet; }
 }
 
 .pricing h2 {
-  padding-bottom: 24px;
+  padding-bottom: 18px;
   font-size: 29px;
   line-height: 1.5;
   text-transform: capitalize;
@@ -370,6 +370,7 @@ nav li a:hover { color: blueviolet; }
   background: #000;  
   color: #fff;
   font-size: 25px;
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: capitalize;
 }
@@ -580,8 +581,10 @@ ul .price span {
 
 .about {
   text-align: center;
-  padding-bottom: 90px;
+  padding-bottom: 86px;
 }
+
+.about .border-It { width: 14%; }
 
 .owners {
 display:flex;
@@ -634,7 +637,7 @@ text-align: left;
 }
 
 .owners a {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding: 12px 20px;
   width: 89%;
   box-sizing: border-box;
@@ -678,9 +681,9 @@ About styling ends here
   padding-bottom: 80px;
 }
 
-.contact .border {
+.contact .border-It {
   width: 13%;
-  margin-bottom: 64px;
+  margin-bottom: 66px;
 }
 
 .Contact-form {
@@ -691,12 +694,15 @@ About styling ends here
 }
 
 .Contact-form .form-group { position: relative; }
-.Contact-form .form-group label { line-height: 1.5; }
+.Contact-form .form-group label { 
+  line-height: 1.2;
+  letter-spacing: 1px;
+ }
 
 .Contact-form .form-group input {
   width: 98%;
   height: 35px;
-  margin-bottom: 20px;  
+  margin-bottom: 18px;  
   font-size: 16px;
   padding: 0 5px;
 }
@@ -856,15 +862,23 @@ footer h2 {
   padding-top: 50px;
   padding-bottom: 30px;
   font-size: 20px;
+  letter-spacing: 1px;
   text-transform: capitalize;
 }
 
+footer p { 
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
 .to-top {
-  padding: 13px 20px;
+  width: 12.6%;
+  padding: 9px 0;
   margin-bottom: 36px;
-  background:#000;
+  background: #000;
   border: 1px solid;
   color: #fff;
+  font-weight: 600;
 }
 
 .to-top:hover {
@@ -872,9 +886,13 @@ footer h2 {
  background: #fff;
 }
 
-.fa-arrow-up:before {
-  content: '';
-  padding-right: 20px;
+.to-top:hover::before { color: #000; }
+
+.to-top:before {
+  content: '\f062';
+  padding-right: 13%;
+  font-family: fontAwesome;
+  color: #fff;
 }
 
 .social-icons { padding-bottom: 26px; }
@@ -905,7 +923,7 @@ footer h2 {
 
 .snapchat::before { content: '\f2ab';}
 .linkedin::before { content: '\f0e1';}
-.facebook::before { content: "\f09a"; }
+.facebook::before { content: "\f082"; }
 .twitter::before { content: "\f099"; }
 .instagram::before { content: "\f16d"; }
 .pinterest::before { content: "\f0d2"; }
