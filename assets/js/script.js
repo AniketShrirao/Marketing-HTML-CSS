@@ -229,7 +229,7 @@ LightBox(html,ownersLightBox,Lightbox,contentInsideLightbox,close);
 =================================*/
 
  /*=================================
-  ContactUs form function start here
+  ContactUs form Validation function start here
 =================================*/
 
 // Selecting Every Input field
@@ -385,7 +385,29 @@ function errors(input, span) {
       break;
   }
 }
+ /*=================================
+  ContactUs form Validation function ends here
+=================================*/
 
  /*=================================
-  ContactUs form function ends here
+  Modal form Validation function starts here
+=================================*/
+
+
+ /*=================================
+  Modal form Validation function ends here
+=================================*/
+
+ /*=================================
+  to the top function starts here
+=================================*/
+
+var toTop = document.querySelector('.to-top');
+toTop.addEventListener('click',function(e){
+  document.body.scrollTop = 0;
+
+});
+
+ /*=================================
+  to the top function ends here
 =================================*/
