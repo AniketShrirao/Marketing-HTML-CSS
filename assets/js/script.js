@@ -1,5 +1,4 @@
 /* Author: Aniket*/
-
  /*=================================
   Slider function starts here
 =================================*/
@@ -109,21 +108,17 @@ SliderCarousel(slider,btns,slides,dots);
   Slider function ends here
 =================================*/
 
+ /*=================================
+  Form Modal function starts here
+=================================*/
+// Get Elements Required for FormModal
+var html = document.querySelector('html');
+var signupBtn = document.querySelectorAll('.signup-Btn');
+var FormModal = document.querySelector('.signup-modal');
+var signupModalForm = document.querySelector('.signup-modal form');
+var close = document.createElement('span');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ /*=================================
+  Form Modal function ends here
+=================================*/
