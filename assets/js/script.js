@@ -405,7 +405,8 @@ function errors(input, span) {
 var toTop = document.querySelector('.to-top');
 toTop.addEventListener('click',function(e){
   document.body.scrollTop = 0;
-
+  html.style.scrollBehavior = "smooth";
+  html.scrollTop = 0;
 });
 
  /*=================================
