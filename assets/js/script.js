@@ -256,3 +256,136 @@ var Regex = [
 
 // selecting form element
 var Contactform = document.querySelector('.Contact-form');
+
+// Declaration of Reset Function make whole form reset
+function resetIt() {
+  inputs.forEach(function (input) {
+    var HelperClass = input.nextElementSibling.classList.contains("helperMessage");
+    var successClass = input.nextElementSibling.classList.contains("success");
+    var errorClass = input.nextElementSibling.classList.contains("error");
+    if (input.value == "") {
+      input.nextElementSibling.classList = "helperMessage none";
+      input.nextElementSibling.innerText = "";
+    } else if (HelperClass || successClass || errorClass) {
+      input.nextElementSibling.classList = "helperMessage  none";
+      input.nextElementSibling.innerText = "";
+    };
+  });
+};
+
+// Submit Button assigned a click Function
+var Button = document.querySelector('.send');
+Button.addEventListener('click', function (e) {
+  e.preventDefault();
+  validateOnSubmit(e);
+});
+
+// Keyup event on each input to check if it is valid
+inputs.forEach(function (input) {
+  var index = inputs.indexOf(input);
+  input.addEventListener("keyup", function () {
+    validate(Regex[index], this);
+  });
+});
+
+// Defiination of Validate Function on Keyup
+function validate(RegularExpression, input) {
+  if (input.value == "") {
+    input.nextElementSibling.classList = "helperMessage";
+  } else if (RegularExpression.test(input.value)) {
+    input.nextElementSibling.classList = "helperMessage success";
+    input.nextElementSibling.innerText = "yay ! you are Correct!";
+  } else {
+    input.nextElementSibling.classList = "helperMessage error";
+    errors(input, input.nextElementSibling);
+  }
+}
+
+// Defiination of Validate Function on submitButton
+function validateOnSubmit(e) {
+  var allEmpty = false;
+  inputs.forEach(function (input) {
+    if (input.value == "") {
+      allEmpty = true;
+    };
+  });
+  // If every fields are empty show error
+  if (allEmpty) {
+    e.preventDefault();
+    inputs.forEach(function (input) {
+      if (input.value == "") {
+        input.nextElementSibling.classList.remove('none');
+        input.nextElementSibling.classList.add('empty');
+        errors(input, input.nextElementSibling);
+      };
+    });
+    var alert = document.querySelector('.Contact-form .customAlert');
+    var ok = document.querySelector('.Contact-form .confirmButton');
+    var message = document.querySelector('.message');
+    message.innerText = "Please Fill the Form Correctly!";
+    alert.classList.remove('fadeout');
+    alert.classList.add('morefadein');
+    ok.addEventListener('click', function () {
+      alert.classList.add('fadeout');
+      alert.classList.remove('morefadein');
+      alert.classList = "customAlert";
+    });
+    return false;
+  }
+  // If every fields are invalid show errors message
+  var helperSpans = document.querySelectorAll('.Contact-form .helperMessage');
+  var allCorrect = false;
+
+  for(var index = 0; index< helperSpans.length; index++) {
+    var SomeErrorify = false;
+    var AllErrorify = helperSpans[index].classList.contains('error');
+    var AllCorrected = helperSpans[index].classList.contains('success');
+      if(AllCorrected === true) {
+        allCorrect = true;
+      } else {
+        SomeErrorify = true;
+      }
+      if(SomeErrorify == true) {
+        allCorrect = false;
+        break;
+      }
+  }
+
+  // If every fields are correct alert success message
+  if (allCorrect == true) {
+    Contactform.reset();
+    var alert = document.querySelector('.contact .customAlert');
+    var ok = document.querySelector('.customAlert .confirmButton');
+    var message = document.querySelector('.customAlert .message');
+    message.innerText = "Your Form Has Submitted Successfully!";
+    resetIt();
+    alert.classList.remove('fadeout');
+    alert.classList.add('fadein');
+    ok.addEventListener('click', function () {
+      alert.classList.add('fadeout');
+      alert.classList.remove('fadein');
+    });
+  }
+}
+
+// Error function Declaration for every set of errors
+function errors(input, span) {
+  if (input.value == "") {
+    span.innerText = "Please fill the empty field!";
+    return;   
+  }
+  switch (input.id) {
+    case "Contact-form-name":
+      span.innerText = "Must Contains Only Alphabets.";
+      break;
+    case "Contact-form-email":
+      span.innerText = "Entered Email is Invalid.";
+      break;
+    default:
+      break;
+  }
+}
+
+ /*=================================
+  ContactUs form function ends here
+=================================*/
