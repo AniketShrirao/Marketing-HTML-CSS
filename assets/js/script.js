@@ -172,6 +172,58 @@ var ownersLightBox = document.querySelectorAll('.owners article');
 var Lightbox = document.querySelector('.owners-lightBox');
 var contentInsideLightbox = document.querySelector('.lightBox-Article');
 
+// LightBox Function started
+function LightBox(html,ownersLightBox,Lightbox,contentInsideLightbox,close) {
+  // Hide LightBox At First
+  var articleArray = Array.from(ownersLightBox);
+  Lightbox.classList.add('class','hidden');
+  // Append Close Button to the LightBox Dynamically
+  Lightbox.appendChild(close);
+  close.classList.add('close');
+  // Add click function to every post
+  for (var article in articleArray) {
+    articleArray[article].addEventListener('click',openlightbox);
+  }
+
+  // openlightbox Function started
+  function openlightbox(){
+    // Get Current image/Post & source on click
+    var currentImg = this.children[0].children[0];
+    var currentHeading = this.children[1].innerText;
+    var currentSpan = this.children[2].innerText;
+    var currentPara = this.children[3].innerText;
+    var url = currentImg.src; 
+
+    // stop background scroll
+    html.classList.add('noscroll');
+    Lightbox.classList.remove('hidden');
+    // make Lightbox appear
+    Lightbox.classList.add('visible');
+    // add current image path to lightbox image 
+    contentInsideLightbox.children[0].setAttribute('src',url);
+    contentInsideLightbox.children[1].innerText = currentHeading;
+    contentInsideLightbox.children[2].innerText = currentSpan;
+    contentInsideLightbox.children[3].innerText = currentPara;
+  };
+  // Close LightBox Function
+  function closeLightbox(){
+    Lightbox.classList.remove('visible');
+    Lightbox.classList.add('hidden');
+    html.classList.remove('noscroll');
+  };
+  // Calling close Lightbox function on close button click 
+  close.addEventListener('click',closeLightbox);
+  // Calling close Lightbox function on Background of lightbox click
+  Lightbox.addEventListener('click',function(e){
+    if (e.target.classList.contains("owners-lightBox")) {
+      Lightbox.classList.add('hidden');
+      html.classList.remove('noscroll');
+    }
+  });
+}
+// Calling LightBox Function
+LightBox(html,ownersLightBox,Lightbox,contentInsideLightbox,close);
+
  /*=================================
   owners-lightBox function ends here
 =================================*/
