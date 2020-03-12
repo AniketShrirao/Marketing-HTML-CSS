@@ -118,7 +118,46 @@ var FormModal = document.querySelector('.signup-modal');
 var signupModalForm = document.querySelector('.signup-modal form');
 var close = document.createElement('span');
 
+// FormModal Function started
+function SignUpFormModal(html,signupBtn,FormModal,signupModalForm,close) {
+  // Hide FormModal At First
+  var btnArray = Array.from(signupBtn);
+  FormModal.classList.add('class','hidden');
+  // Append Close Button to the FormModal Dynamically
+  signupModalForm.appendChild(close);
+  close.classList.add('close');
+  // Add click function to every button
+  for (var button in btnArray) {
+    btnArray[button].addEventListener('click',openFormModal);
+  }
 
+  // openFormModal Function started
+  function openFormModal(){
+    // stop background scroll
+    html.classList.add('noscroll');
+    FormModal.classList.remove('hidden');
+    // make FormModal appear
+    FormModal.classList.add('visible');
+
+  };
+  // Close FormModal Function
+  function closeFormModal(){
+    FormModal.classList.remove('visible');
+    FormModal.classList.add('hidden');
+    html.classList.remove('noscroll');
+  };
+  // Calling close FormModal function on close button click 
+  close.addEventListener('click',closeFormModal);
+  // Calling close FormModal function on Background of FormModal click
+  FormModal.addEventListener('click',function(e){
+    if (e.target.classList.contains("signup-modal")) {
+      FormModal.classList.add('hidden');
+      html.classList.remove('noscroll');
+    }
+  });
+}
+// Calling FormModal Function
+SignUpFormModal(html,signupBtn,FormModal,signupModalForm,close);
  /*=================================
   Form Modal function ends here
 =================================*/
