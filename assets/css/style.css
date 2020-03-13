@@ -975,17 +975,17 @@ footer p a {
     transition: all .5s ease-in-out;
   }
   
-  .hamburger:hover > span:nth-child(1) {
+  .hamburger-active > span:nth-child(1) {
     background-color: crimson;
     margin: 0;
     transform: translate(-5px,5px) rotate(45deg);
   }
-  .hamburger:hover > span:nth-child(2) {
+  .hamburger-active > span:nth-child(2) {
     background-color: blueviolet;
     margin: 0;
     transform: scale(0);
   }
-  .hamburger:hover > span:nth-child(3) {
+  .hamburger-active > span:nth-child(3) {
     background-color: crimson;
     margin: 0;
     transform: translate(-6px,-5px) rotate(-45deg);
@@ -1008,8 +1008,8 @@ footer p a {
   .slide-head {width: 16.7%; }
   .slide:nth-of-type(1) .slide-head { left:77.7%; }
   .slide:nth-of-type(2) .slide-head { left:177.7%; }
-  .slide:nth-of-type(3) .slide-head { left:281.5%; }
-  .slide:nth-of-type(4) .slide-head { left:376.7%; }
+  .slide:nth-of-type(3) .slide-head { left:273.5%; }
+  .slide:nth-of-type(4) .slide-head { left:372.7%; }
   .slide:nth-of-type(5) .slide-head { left:489.5%; }
   .lightBox-Article { width: 45%; }
   .signup-modal form { width: 60%;}
