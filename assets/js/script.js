@@ -228,17 +228,6 @@ LightBox(html,ownersLightBox,Lightbox,contentInsideLightbox,close);
   owners-lightBox function ends here
 =================================*/
 
-
- /*=================================
-  Modal form Validation function starts here
-=================================*/
-
-
- /*=================================
-  Modal form Validation function ends here
-=================================*/
-
-
  /*=================================
  Validation function start here
 =================================*/
@@ -368,23 +357,11 @@ function validateOnSubmit(e) {
       };
     });
     if(e.target.id== 'submit') {
-      alert("Please Fill the Form Correctly!");
+      setTimeout(function() {
+        alert("Please Fill the Form Correctly!");
+      }, 4000);
       return false;
     }
-    var Customalert = document.querySelector('.contact .customAlert');
-    var ok = document.querySelector('.contact .confirmButton');
-    var message = document.querySelector('.message');
-    message.innerText = "Please Fill the Form Correctly!";
-    Customalert.classList.remove('fadeout');
-    Customalert.classList.add('morefadein');
-    ok.addEventListener('click', function () {
-      resetIt(e);
-      Customalert.classList.add('fadeout');
-      Customalert.classList.remove('morefadein');
-      Customalert.classList = "customAlert";
-
-    });
-    return false;
   }
   var helperSpans;
   if(e.target.id== 'submit') {
@@ -409,27 +386,38 @@ function validateOnSubmit(e) {
       }
   }
   if(e.target.id== "submit") {
-    alert('Your Form Has Submitted Successfully!');
-    e.target.parentNode.parentNode.reset();
-    resetIt(e);
-    return false;
+    if(allCorrect == true) {
+      alert('Your Form Has Submitted Successfully!');
+      e.target.parentNode.parentNode.reset();
+      resetIt(e);
+      return false;
+    } else {
+      return false;
+    }
   }
   // If every fields are correct Customalert success message
   if (allCorrect == true) {
     Contactform.reset();
+    CustomAlertSuccess();
+  }
+  function CustomAlertSuccess() {
     var Customalert = document.querySelector('.contact .customAlert');
     var ok = document.querySelector('.customAlert .confirmButton');
     var message = document.querySelector('.customAlert .message');
     message.innerText = "Your Form Has Submitted Successfully!";
     resetIt(e);
-    Customalert.classList.remove('fadeout');
+    Customalert.classList.remove('hidden');
     Customalert.classList.add('fadein');
-    ok.addEventListener('click', function () {
-      Customalert.classList.add('fadeout');
+    function fadeAway() {
+      Customalert.classList.add('hidden');
       Customalert.classList.remove('fadein');
-    });
+    }
+    ok.addEventListener('click',fadeAway);
+    setTimeout(function() {
+      fadeAway();
+    }, 4000);
   }
-}
+ }
 
 // Error function Declaration for every set of errors
 function errors(input, span) {
