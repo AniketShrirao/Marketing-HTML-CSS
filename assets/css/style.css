@@ -180,9 +180,9 @@ nav li a {
 
 .slide:nth-of-type(1) .slide-head { left: 83.7%; }
 .slide:nth-of-type(2) .slide-head { left: 183.7%; } 
-.slide:nth-of-type(3) .slide-head { left: 285.5%; }
-.slide:nth-of-type(4) .slide-head { left: 390.7%; }
-.slide:nth-of-type(5) .slide-head { left: 493.5%; }
+.slide:nth-of-type(3) .slide-head { left: 283.5%; }
+.slide:nth-of-type(4) .slide-head { left: 383.7%; }
+.slide:nth-of-type(5) .slide-head { left: 484%; }
 
 
 .Marketing-sldier { 
@@ -427,7 +427,6 @@ ul .price span {
   z-index: 1;
   width: 100%;
   height: 100%;
-  display: none;
   justify-content: center;
   background: rgba(0,0,0,0.8);
   align-items: center;
@@ -456,12 +455,15 @@ ul .price span {
   padding: 10px;
 }
 
-.signup-modal .form-group span {
-  width: 24%;
-  padding: 13px 15%;
-  margin: 30px;
+.signup-modal .helperMessage {
+  width: 40%;
+  padding: 13px;
+  margin: 0 30px;
 }
 
+.signup-modal .error { color: #000; }
+.signup-modal .helperMessage:nth-of-type(4) .error::before { top: 22px; }
+.signup-modal .success { color: #fff ; }
 .signup-modal .form-control { padding: 20px; }
 
 .signup-modal .form-group input{
@@ -500,7 +502,7 @@ ul .price span {
   content: ' ';
   height: 33px;
   width: 2px;
-  background-color: indianred;
+  background-color: #000;
   transition: all 0.3s ease;
 }
 
@@ -508,12 +510,13 @@ ul .price span {
   display: flex;
   transition: all 0.3s ease;
 }
+
 .hidden { 
   display: none;
   transition: all 0.3s ease;
 }
-.noscroll { overflow: hidden; }
 
+.noscroll { overflow: hidden; }
 .close:before { transform: rotate(45deg); }
 .close:after { transform: rotate(-45deg); }
 
@@ -699,7 +702,7 @@ About styling ends here
 .Contact-form .helperMessage {
   position: absolute;
   left: 5%;
-  top: 0;
+  top: -7px;
   width: 30%;
   padding: 5px;
 }
@@ -722,8 +725,8 @@ About styling ends here
   border: 1px solid #fff;
   background: #FFEFBA;
   background: linear-gradient(to right, #FFFFFF, #FFEFBA);
-  background: linear-gradient(to right, #ec2F4B, #009FFF);
   animation-name: fadeIn;
+  animation-fill-mode: both;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
 }
@@ -900,7 +903,6 @@ footer p a {
 /*media query starts*/
 /*media query for 1024px starts here*/
 @media only screen and (min-width: 1024px) {
-
   nav li a:hover { color: blueviolet; }
   .btn:hover { background-color: rgba(0,0,0,0.5); }
   .dot:hover { background-color: rgba(0,0,0,0.3); }
@@ -955,10 +957,10 @@ footer p a {
 /*media query for 767px starts here*/
 @media only screen and (max-width: 767px) {
   .slide-head {width: 16.7%; }
-  .slide:nth-of-type(1) .slide-head { left:79.7%; }
-  .slide:nth-of-type(2) .slide-head { left:179.7%; }
-  .slide:nth-of-type(3) .slide-head { left:284.5%; }
-  .slide:nth-of-type(4) .slide-head { left:385.7%; }
+  .slide:nth-of-type(1) .slide-head { left:77.7%; }
+  .slide:nth-of-type(2) .slide-head { left:177.7%; }
+  .slide:nth-of-type(3) .slide-head { left:281.5%; }
+  .slide:nth-of-type(4) .slide-head { left:376.7%; }
   .slide:nth-of-type(5) .slide-head { left:489.5%; }
   .Offer .border-It { width: 28%; }
   .services { flex-wrap: wrap; }
@@ -1055,4 +1057,40 @@ footer p a {
     justify-content: center;
     flex-wrap: wrap;
   } 
+}
+
+/*media query for 320px starts here*/
+@media only screen and (max-width: 320px) {
+  .slide-head {width: 23%; }
+  .slide:nth-of-type(1) .slide-head { left:72.7%; }
+  .slide:nth-of-type(2) .slide-head { left:172.7%; }
+  .slide:nth-of-type(3) .slide-head { left:277.5%; }
+  .slide:nth-of-type(4) .slide-head { left:378.7%; }
+  .slide:nth-of-type(5) .slide-head { left:481.5%; }
+  .border-It { font-size: 24px; }
+  .services { flex-wrap: wrap; }
+  .services li { width: 100%; }
+  .Offer .border-It { width: 34%; }
+  .about .border-It { width: 30%; }
+  .contact .border-It { width: 26%; }
+  .pricing h2 { font-size: 27px; }
+  .pricing p { font-size: 15px; }
+  .plans article h3 { font-size: 23px; }
+  ul .price span { font-size: 30px; }
+  .plans article { width: 70%; }
+  .plans article:first-of-type { margin:0; }
+  .plans article:nth-of-type(2) { margin-top: 15px; }
+  .owners article { width: 70%; }
+  .owners h3 { font-size: 24px; }
+  .owners p { font-size: 15px; }
+  .owners article:nth-of-type(2) { margin-top: 25px; }
+  .to-top { width: 25%; }
+
+  .plans,
+  .owners { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
