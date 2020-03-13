@@ -1003,8 +1003,13 @@ footer p a {
     background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);
     background: linear-gradient(to right, #CCC, #fff,#CBB);
   }
+
+  .navScale {
+    transform: scale(1);
+    z-index: 2;
+  }
+
   nav ul li { padding: 5px; }
-  .navScale { transform: scale(1); }
   .slide-head {width: 23%; }
   .slide:nth-of-type(1) .slide-head { left:73.7%; }
   .slide:nth-of-type(2) .slide-head { left:173.7%; }
